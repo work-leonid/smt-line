@@ -1,4 +1,11 @@
 module.exports = {
+  theme: {
+	extend: {
+	  fontFamily: {
+		'custom': ['Montserrat', 'sans-serif']
+	  },
+	},
+  },
   content: [
     './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # get "/pages/*page", to: "pages#show"
-  root "pages#show", page: "about"
+  root "pages#show", page: "index"
   
   # for lookbook
   mount Lookbook::Engine, at: "/lookbook"
