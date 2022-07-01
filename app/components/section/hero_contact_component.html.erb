@@ -6,16 +6,12 @@
 
   <div class="mb-20">
   <%= render Grid::HeroSecondPageComponent.new do |c| %>
-    <%= render Element::TitleComponent.new(title: "Всё, что нужно для производства электроники", type: :h1) %>
+    <%= render Element::TitleComponent.new(title: "Контакты", type: :h1) %>
 
     <% c.with_action do %>
       <%= render ButtonComponent.new(link: "/contact", title: "Отдел продаж", type: :primary) %>
     <% end %>
   <% end %>
-  </div>
-
-  <div class="bg-gradient-to-b from-slate-700/40 to-slate-900 p-10">
-    <%= render Section::LogosWithTitleCenterComponent.new(title: "Эксклюзивный  официальный  дистрибьютор") %>
   </div>
 
 </section>
