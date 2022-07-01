@@ -1,0 +1,37 @@
+<%= render Grid::CategoryComponent.new do |c| %>
+  <% c.with_aside do %>
+
+    <div class="hidden sm:block sm:columns-2 md:flex md:flex-col gap-0">
+      <%= render Element::CatalogFilterComponent.new(title: "Производители", items: ["Charmhigh", "ETA", "MOJE", "Mechatronic", "Neoden", "Yingxing", "Termway", "Beijing Huawei Silkroad Electronic", "QIHE", "GLICHN", "Ren Thang", "Heech Electronic", "HCT"]) %>
+      <%= render Element::CatalogFilterComponent.new(title: "Напряжение", items: ["110 В", "220 В", "380 В"]) %>
+      <%= render Element::CatalogFilterComponent.new(title: "Питателей (максимум)", items: ["менее 20", "20-50", "50-70", "70-100", "> 100"]) %>
+      <%= render Element::CatalogFilterComponent.new(title: "Захваты", items: ["1 шт", "2 шт", "4 шт", "6 шт", "8 шт", "12 шт", "20 шт", "24 шт"]) %>
+      <%= render Element::CatalogFilterComponent.new(title: "Управление", items: ["Автоматическое"]) %>
+    </div>
+
+    <%= render Element::CatalogMenuComponent.new %>
+
+  <% end %>
+
+
+<div class="grid grid-cols-1 divide-y divide-slate-200 gap-20">
+
+  <div class="-mt-20">
+    <%= render Element::CardDetailComponent.new(photo: "https://smt-line.ru/img/byhash/c4/11/c411f2211709e9e2d77143ee4867ef03d772d85dfb1aa4fe4e12f9b45bd46853.jpeg", title: "Установщик компонентов Beijing Huawei Silkroad Electronic HW-DSQ800-120F", description: "Автоматический установщик SMD-компонентов TVM926s с конвейером, видеокоррекцией захвата компонентов на лету, со встроенным компьютером. 4 захвата, до 50 питателей, рабочая область до 300*400 мм, компоненты 0201-5730, LQFP, QFN, QFP, BGA, точность ±0.025 мм. Скорость установки до 9500 комп/час.") %>
+  </div>
+
+    <%= render Element::CardDetailComponent.new(photo: "https://smt-line.ru/img/byhash/49/82/4982ccec903c70f3bd4739ef9419462e8cec4d192ae092a1939c71e66b527b7b.jpeg", title: "Печь оплавления припоя Heech Electronic HC-RF6450", description: "Автоматический установщик с возможностью встраивания в производственную линию. 8 захватов, возможность установки до 120 питателей, поддержка паллет. Скорость установки 12000-15000 комп./час. Компоненты высотой до 20 мм. Размеры печатных плат до 460*370 мм.
+") %>
+
+    <%= render Element::CardDetailComponent.new(photo: "https://smt-line.ru/img/byhash/e5/b0/e5b06e196e96625c2533640ca7d8ab59f66b54d90244cfd5b23e643b57cc48a9.jpeg", title: "Трафаретный принтер Heech Electronic HC-PR1250", description: "Автоматический установщик с возможностью встраивания в производственную линию. 8 захватов, возможность установки до 96 питателей, поддержка паллет. Скорость установки 12000-15000 комп./час. Компоненты высотой до 20 мм. Размеры печатных плат до 460*370 мм.
+") %>
+
+    <%= render Element::CardDetailComponent.new(photo: "https://smt-line.ru/img/byhash/40/8e/408e89cf29fb47a501210d0c48c870e3f114cd8223600a741acab34d79efcbb1.jpeg", title: "Печь волновой пайки Heech Electronic HC-WS400-C", description: "Автоматический установщик с возможностью встраивания в производственную линию. 4 захвата, возможность установки до 64 питателей, поддержка паллет. Скорость установки 8000-11000 комп./час. Компоненты высотой до 20 мм. Размеры печатных плат до 510*450 мм.
+") %>
+
+    <%= render Element::CardDetailComponent.new(photo: "https://smt-line.ru/img/byhash/49/82/4982ccec903c70f3bd4739ef9419462e8cec4d192ae092a1939c71e66b527b7b.jpeg", title: "Печь оплавления припоя Heech Electronic HC-RF6450", description: "Автоматический установщик с возможностью встраивания в производственную линию. 8 захватов, возможность установки до 80 питателей, поддержка паллет. Скорость установки 11000-12000 комп./час. Компоненты высотой до 7 мм. Размеры печатных плат до 480*370 мм.
+") %>
+
+</div>
+
+<% end %>

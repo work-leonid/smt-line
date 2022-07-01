@@ -1,0 +1,16 @@
+<div class="py-10 md:py-40 lg:py-56">
+
+  <%= render Grid::TitleContentComponent.new do |c| %>
+    <% c.with_title do %>
+      <%= render Element::TitleComponent.new(title: "Всё оборудование имеет все необходимые лицензии  и сертификаты", type: :h1) %>
+    <% end %>
+
+    <div class="flex gap-20 disable-scrollbars overflow-x-scroll">
+      <% [0, 1, 2, 3].each do |item| %>
+        <img src="https://placehold.co/300x400" />
+      <% end %>
+    </div>
+
+  <% end %>
+
+</div>

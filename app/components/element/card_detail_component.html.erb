@@ -1,0 +1,19 @@
+<div class="grid group pt-20 grid-cols-1 xl:grid-cols-5 gap-10">
+  <div class="xl:col-span-2 bg-white">
+    <img src="<%= @photo %>" class="scale-95 group-hover:scale-100 transition-all duration-300 w-full h-72 -z-10 object-contain" />
+  </div>
+  <div class="xl:col-span-3">
+    <a href="/pages/catalog-item" class="mb-5 block text-3xl hover:text-sky-500 font-medium">
+      <%= @title %>
+    </a>
+    <p class="mb-5">
+      <%= @description %>
+    </p>
+
+    <div class="text-base justify-between flex md:flex-col lg:flex-row gap-4">
+      <%= render ButtonComponent.new(title: "Детали", link: "#", type: :primary) %>
+      <%= render ButtonComponent.new(title: "Запросить цену", link: "#", type: :secondary_color) %>
+    </div>
+
+  </div>
+</div>

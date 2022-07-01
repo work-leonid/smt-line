@@ -1,12 +1,12 @@
-<div class="lg:sticky lg:top-0">
-  <%= render Index::HeroComponent.new %>
-</div>
+<div>
+  <%= render Section::HeroComponent.new %>
 
-<div class="lg:relative lg:bg-white">
-  <%= render Index::Hero::BenefitsComponent.new %>
-  <%= render Index::AboutCompanyComponent.new %>
-
-  <%= render Index::TopComponent.new %>
-  <%= render DeliveryComponent.new %>
-  <%= render CertificatesComponent.new %>
+  <div class="lg:relative block lg:z-50 lg:bg-white">
+    <%= render Section::BenefitsComponent.new %>
+    <%= render Section::AboutCompanyComponent.new %>
+    <%= render Section::TopProductsComponent.new %>
+    <%= render Section::DeliveryComponent.new %>
+    <%= render Section::CertificatesComponent.new %>
+    <%= render Section::NewsComponent.new %>
+  </div>
 </div>

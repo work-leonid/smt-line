@@ -1,0 +1,12 @@
+<div class="bg-slate-100 py-10 md:py-40 lg:py-56">
+
+  <%= render Grid::TitleContentComponent.new do |c| %>
+    <% c.with_title do %>
+      <%= render Element::TitleComponent.new(title: "Новости", type: :h1) %>
+    <% end %>
+
+    <%= render Element::NewsLastComponent.new %>
+  <% end %>
+
+</div>
+

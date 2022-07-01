@@ -1,0 +1,26 @@
+<div class="bg-slate-900 text-white lg:px-20  py-10 lg:py-40">
+  <%= render Grid::Cols2Component.new do %>
+
+    <div class="relative">
+      <span class="flex top-[8em] left-[23%] relative h-8 w-8">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-8 w-8 bg-orange-500"></span>
+      </span>
+      <%= image_tag('delivery.png', srcset: { 'delivery@2x.png' => '2x'}) %>
+    </div>
+
+    <div class="text-2xl">
+
+      <p class="mb-10 text-3xl">Срок поставки заказа с момента его оформления</p>
+
+      <div class="flex flex-col lg:flex-row gap-4 lg:gap-20 mb-10">
+        <p><span class="font-bold block">до 2 недель</span> по Перми и Екатеринбургу</p>
+        <p><span class="font-bold block">до 4 недель</span> в любую точку России</p>
+      </div>
+
+      <div class="text-xl">
+        <%= render ButtonComponent.new(link: "/contact", title: "Отдел продаж", type: :primary) %>
+      </div>
+    </div>
+  <% end %>
+</div>

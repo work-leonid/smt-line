@@ -1,0 +1,15 @@
+<div class="bg-[#212A41] text-white py-10 md:py-20">
+  <%= render Grid::Cols3Component.new do %>
+    <%= render Element::IconContentComponent.new(icon: "icon_discount") do %>
+      Обходим посредников и <span class="font-bold">экономим вам до 40% стоимости товаров</span>
+    <% end %>
+
+    <%= render Element::IconContentComponent.new(icon: "icon_support") do %>
+      <span class="font-bold">Обеспечиваем техподдержкой 24/7.</span> Гарантируем выезд техспециалиста в любую точку страны в течение 24 часов 
+    <% end %>
+
+    <%= render Element::IconContentComponent.new(icon: "icon_guarantees") do %>
+      Минимизируем риски по вашему проекту и <span class="font-bold">несём полную юридическую и финансовую ответственность за результат</span>
+    <% end %>
+  <% end %>
+</div>

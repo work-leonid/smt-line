@@ -1,0 +1,6 @@
+<div class="flex md:block gap-4">
+  <%= image_tag("icons/#{ @icon}.png", srcset: { "icons/#{@icon}@2x.png" => '2x' }, class: 'mb-5 shrink-0 self-start') %>
+  <p class=" lg:leading-normal">
+    <%= content %>
+  </p>
+</div>

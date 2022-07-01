@@ -1,0 +1,16 @@
+<div class="bg-gradient-to-b from-slate-100">
+  <div class="p-8 text-base">
+
+    <p class="mb-4 font-bold"><%= @title %></p>
+
+  <ul class="flex flex-col gap-1">
+    <% @items.each do |item| %>
+      <li class="overflow-hidden flex gap-0 group flex-nowrap items-center">
+        <input id="<%= item %>" type="checkbox" class="form-check-input appearance-none h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer shrink-0"/>
+        <label for="<%= item %>" class="truncate group-hover:text-sky-500 text-clip"><%= item %></label>
+      </li>
+    <% end %>
+  </ul>
+
+  </div>
+</div>

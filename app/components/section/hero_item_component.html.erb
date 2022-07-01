@@ -1,0 +1,27 @@
+<section class="bg-slate-900 pb-10 md:pb-16 lg:pb-20  text-white">
+
+  <!-- start navbar -->
+  <%= render Section::NavbarComponent.new %>
+  <!-- end navbar -->
+
+  <div class="">
+    <%= render Grid::HeroSecondPageComponent.new do |c| %>
+      <div class="text-base mb-5">
+        <a href="/pages/catalog" class="hover:text-sky-500">Каталог</a>
+        <span class="text-slate-500 mx-4"> / </span>
+        <a href="/pages/catalog-category" class="hover:text-sky-500">Установщики компонентов</a>
+        <span class="text-slate-500 mx-4"> / </span>
+        <a class="text-slate-500">Установщики компонентов</a>
+      </div>
+
+      <div class="mb-5 lg:mb-2">
+        <%= render Element::TitleComponent.new(title: "Установщик компонентов QIHE TVM926s", type: :h1) %>
+      </div>
+
+      <% c.with_action do %>
+        <%= render ButtonComponent.new(link: "/contact", title: "Запросить цену", type: :primary) %>
+      <% end %>
+    <% end %>
+  </div>
+
+</section>
