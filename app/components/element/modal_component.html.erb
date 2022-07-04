@@ -1,7 +1,7 @@
 <%= turbo_frame_tag "modal" do %>
 
   <div 
-    class="flex items-center justify-center fixed z-50 inset-0 h-full p-6" 
+    class="flex items-center backdrop backdrop-blur-md justify-center fixed z-50 inset-0 h-full p-6" 
     data-controller="modal" 
     data-action="keyup@document->modal#closeWithKeyboard">
 
