@@ -19,7 +19,7 @@
       </div>
 
       <% c.with_action do %>
-        <%= render ButtonComponent.new(link: "/contact", title: "Запросить цену", type: :primary) %>
+        <%= link_to "Запросить цену", modal_path, data: { turbo_frame: 'modal' }, class: "inline-block bg-orange-500 hover:text-white/80 hover:bg-orange-600 flex-nowrap text-center w-auto rounded-full px-8 sm:px-8 py-3 font-medium" %>
       <% end %>
     <% end %>
   </div>
