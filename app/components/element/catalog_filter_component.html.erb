@@ -7,7 +7,7 @@
     <% @items.each do |item| %>
       <li class="overflow-hidden flex gap-0 group flex-nowrap items-center">
         <input id="<%= item %>" type="checkbox" class="form-check-input appearance-none h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer shrink-0"/>
-        <label for="<%= item %>" class="truncate group-hover:text-sky-500 text-clip"><%= item %></label>
+        <label for="<%= item %>" class="mt-2 truncate group-hover:text-sky-500 text-clip"><%= item %></label>
       </li>
     <% end %>
   </ul>
