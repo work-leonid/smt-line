@@ -13,48 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
-  <dialog id="my_dialog" class="p-10 backdrop:bg-slate-900/40 backdrop:backdrop-blur-xl" tabindex=-1>
-    <div class="mb-10">
-      <%= render Element::TitleComponent.new(title: "Заявка на бесплатную консультацию или предварительный расчёт", type: :h2) %> 
-    </div>
-
-    <div class="space-y-4">
-      <div class="grid grid-cols-3 gap-10">
-        <label for="name" class="col-span-1">Ваше имя</label>
-        <input type="text" id="name" placeholder="Имя" class="appearance-none px-3 py-2 border border-slate-400 col-span-2"/>
-      </div>
-      <div class="grid grid-cols-3 gap-10">
-        <label for="contacts" class="col-span-1">Телефон или email</label>
-        <input type="text" id="contacts" class="appearance-none px-3 py-2 border border-slate-400 col-span-2"/>
-      </div>
-      <div class="grid grid-cols-3 gap-10">
-        <label for="message" class="col-span-1">Вопрос или предложение</label>
-        <textarea rows="8" type="text" id="message" class="appearance-none px-3 py-2 border border-slate-400 col-span-2"></textarea>
-      </div>
-
-      <div class="grid grid-cols-3 gap-10">
-        <div class="col-start-2 col-span-2">
-          <%= render ButtonComponent.new(link: "#", title: "Отправить сообщение", type: :primary) %>
-        </div>
-      </div>
-    </div>
-
-    <button onclick="closeDialog(myDialog)">close</close>
-  </dialog>
+  <%= turbo_frame_tag "modal" %>
 
   <body class="text-base md:text-xl font-custom text-slate-700">
     <%= yield %>
   </body>
 
-  <script>
-const myDialog = document.getElementById('my_dialog');
-
-const showDialog = function ( el ) {
-  el.showModal();
-  el.focus();
-}
-const closeDialog = function ( el ) {
-  el.close();
-}
-  </script>
 </html>

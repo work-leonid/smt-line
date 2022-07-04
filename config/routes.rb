@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "/pages/*page", to: "pages#show"
+  get "/pages/modal", to: "pages#show", as: "modal"
   root "pages#show", page: "index"
 
   

@@ -19,7 +19,7 @@
       </div>
 
       <div class="text-xl">
-        <%= render ButtonComponent.new(link: "/contact", title: "Отдел продаж", type: :primary) %>
+      <%= link_to "Отдел продаж", modal_path, data: { turbo_frame: 'modal' }, class: "inline-block border-2 border-white/30 hover:border-orange-400/50 hover:text-orange-400 flex-nowrap text-center w-auto rounded-full px-8 sm:px-8 py-3 font-medium" %>
       </div>
     </div>
   <% end %>

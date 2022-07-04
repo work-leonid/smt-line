@@ -16,7 +16,7 @@
 
     <div class="flex text-xl flex-col sm:flex-row  gap-4 sm:gap-10">
       <%= render ButtonComponent.new(link: "/pages/catalog", title: "Каталог", type: :primary) %>
-      <%= render ButtonComponent.new(link: "/pages/contact", title: "Отдел продаж", type: :secondary) %>
+      <%= link_to "Отдел продаж", modal_path, data: { turbo_frame: 'modal' }, class: "inline-block border-2 border-white/30 hover:border-orange-400/50 hover:text-orange-400 flex-nowrap text-center w-auto rounded-full px-8 sm:px-8 py-3 font-medium" %>
     </div>
   <% end %>
 

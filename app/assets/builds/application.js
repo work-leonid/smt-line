@@ -5699,7 +5699,26 @@
     }
   };
 
+  // app/javascript/controllers/modal_controller.js
+  var modal_controller_default = class extends Controller {
+    initialize() {
+      console.log(this.element);
+    }
+    open() {
+    }
+    close() {
+      this.element.parentElement.removeAttribute("src");
+      this.element.remove();
+    }
+    closeWithKeyboard(e) {
+      if (e.code == "Escape") {
+        this.close();
+      }
+    }
+  };
+
   // app/javascript/controllers/index.js
   application.register("hello", hello_controller_default);
+  application.register("modal", modal_controller_default);
 })();
 //# sourceMappingURL=assets/application.js.map

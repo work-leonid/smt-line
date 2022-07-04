@@ -17,7 +17,7 @@
 
     <div class="text-base justify-between flex md:flex-col lg:flex-row gap-4">
       <%= render ButtonComponent.new(title: "Детали", link: "/pages/catalog-item", type: :primary) %>
-      <%= render ButtonComponent.new(title: "Запросить цену", link: "#", type: :secondary_color) %>
+        <%= link_to "Запросить цену", modal_path, data: { turbo_frame: 'modal' }, class: "inline-block border-2 border-orange-400/20 hover:border-orange-400/50 hover:text-orange-500 flex-nowrap text-center w-auto text-orange-400 rounded-full px-8 sm:px-8 py-3 font-medium" %>
     </div>
 
   </div>
