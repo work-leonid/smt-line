@@ -1,0 +1,17 @@
+<section class="bg-slate-900 text-white pb-16">
+
+  <!-- start navbar -->
+  <%= render Section::NavbarComponent.new %>
+  <!-- end navbar -->
+
+  <div class="">
+  <%= render Grid::HeroSecondPageComponent.new do |c| %>
+    <%= render Element::TitleComponent.new(title: "Компания", type: :h1) %>
+
+    <% c.with_action do %>
+      <%= link_to "Отдел продаж", modal_path, data: { turbo_frame: 'modal' }, class: "inline-block border-2 border-white/30 hover:border-orange-400/50 hover:text-orange-400 flex-nowrap text-center w-auto rounded-full px-8 sm:px-8 py-3 font-medium" %>
+    <% end %>
+  <% end %>
+  </div>
+
+</section>

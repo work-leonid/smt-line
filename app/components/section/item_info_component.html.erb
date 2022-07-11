@@ -1,28 +1,30 @@
 <%= render Grid::CategoryComponent.new do |c| %>
   <% c.with_aside do %>
 
-
-    <a href="#" class="flex mb-5 px-5 text-sky-500 py-4 gap-4 items-center border-2 border-sky-500 font-medium hover:border-sky-400">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /> </svg>
+    <div class="px-5 md:px-0">
+      <a href="#" class="flex mb-5 px-5 text-sky-500 py-4 gap-4 items-center border-2 border-sky-500 font-medium hover:border-sky-400 hover:bg-sky-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /> </svg>
         Документация
-    </a>
+      </a>
 
-    <div class="flex flex-col gap-1 items-start mb-5 rounded-xl">
-      <% [ "Beijing Huawei Silkroad Electronic", "Управление: автоматическое", "Напряжение: 220В", "Питателей (максимум): 70-100", "Захваты: 8 шт"].each do |item| %>
-        <a href="/pages/catalog-category" class="text-base bg-sky-600 hover:bg-sky-500 font-medium px-3 py-2 text-white hover:text-white/80">
-          <%= item %>
-        </a>
-      <% end %>
+      <div class="flex flex-col gap-1 items-start mb-5 rounded-xl">
+        <% [ "Beijing Huawei Silkroad Electronic", "Управление: автоматическое", "Напряжение: 220В", "Питателей (максимум): 70-100", "Захваты: 8 шт"].each do |item| %>
+          <a href="/pages/catalog-category" class="text-base bg-sky-600 hover:bg-sky-500 font-medium px-3 py-2 text-white hover:text-white/80">
+            <%= item %>
+          </a>
+        <% end %>
+      </div>
     </div>
-
-    <%= render Element::CatalogMenuComponent.new %>
+    <div class="hidden md:block">
+      <%= render Element::CatalogMenuComponent.new %>
+    </div>
 
   <% end %>
 
   <div class="space-y-10 lg:space-y-20">
     <p class="leading-relaxed max-w-4xl">Установщик компонентов TVM926S - обновленная версия TVM926, которая завоевала всемирную популярность благодаря стабильной работе и длительному сроку службы. Оси XYZ имеют прецизионную точность перемещения. Система коррекции захвата состоит из двух точных камер, которые одновременно контролируют 4 захвата. Скорость установки компонентов заметно повысилась, а дизайн корпуса стал более эргономичным, что упрощает транспортировку и экономит пространство в рабочей зоне. Установщик SMD-компонентов TVM926S может использовать до 64 восьмимиллиметровых питателей, так же установщик укомплектован сервоприводами с обратной связью.</p>
 
-    <div class="flex gap-10 bg-gradient-to-b from-slate-100 p-8 disable-scrollbars overflow-x-scroll">
+    <div class="flex gap-10 bg-gradient-to-b from-slate-100 p-5 md:p-8 disable-scrollbars overflow-x-scroll">
       <% ["https://smt-line.ru/img/byhash/c4/11/c411f2211709e9e2d77143ee4867ef03d772d85dfb1aa4fe4e12f9b45bd46853.jpeg", "https://smt-line.ru/img/byhash/f9/66/f9661c91bd7710cfa32a83fad435a43468e3f98c3d59e0a1b8c14d617a18fa98.jpeg"].each do |item| %>
         <img src="<%= item %>" class="w-2/3" />
       <% end %>
@@ -36,7 +38,7 @@
      </div>
 
 
-    <dl class="grid md:grid-cols-3 gap-5 bg-slate-100 p-10">
+    <dl class="grid md:grid-cols-3 gap-5 bg-slate-100 p-5 md:p-10">
       <% [{title: 'Габариты оборудования (Д*Ш*В)', value: '1380*1500*1410 мм'},
           {title: 'Габариты в упаковке (Д*Ш*В)', value: '1580*1700*1610 мм'},
           {title: 'Вес оборудования', value: '650 кг'},
@@ -45,20 +47,20 @@
           {title: 'Максимальный размер платы', value: '460x370 мм'}].each do |item| %>
         <div>
           <dt class="text-base opacity-70 mb-2"><%= item[:title] %></dt>
-          <dd class="text-2xl"><%= item[:value] %></dd>
+          <dd class="md:text-2xl"><%= item[:value] %></dd>
         </div>
       <% end %>
      </dl>
 
-    <dl class="grid md:grid-cols-2 gap-5 p-5">
+    <dl class="grid md:grid-cols-2 md:gap-5 p-5">
       <% [{title: 'Габариты оборудования (Д*Ш*В)', value: '1380*1500*1410 мм'},
           {title: 'Габариты в упаковке (Д*Ш*В)', value: '1580*1700*1610 мм'},
           {title: 'Вес оборудования', value: '650 кг'},
           {title: 'Захваты', value: '8'},
           {title: 'Скорость установки', value: '12 000 - 15 000 комп./час'},
           {title: 'Максимальный размер платы', value: '460x370 мм'}].each do |item| %>
-          <dt class="text-base"><%= item[:title] %></dt>
-          <dd class=""><%= item[:value] %></dd>
+          <dt class="text-base opacity-70"><%= item[:title] %></dt>
+          <dd class="mb-5"><%= item[:value] %></dd>
       <% end %>
      </dl>
   </div>

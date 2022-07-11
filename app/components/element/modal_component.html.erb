@@ -17,20 +17,20 @@
       </div>
 
       <div class="space-y-4">
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid md:grid-cols-3 md:gap-10">
           <label for="name" class="col-span-1">Ваше имя</label>
           <input type="text" id="name" placeholder="Имя" class="appearance-none px-3 py-2 border border-slate-400 col-span-2"/>
         </div>
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid md:grid-cols-3 md:gap-10">
           <label for="contacts" class="col-span-1">Телефон или email</label>
           <input type="text" id="contacts" class="appearance-none px-3 py-2 border border-slate-400 col-span-2"/>
         </div>
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid md:grid-cols-3 md:gap-10">
           <label for="message" class="col-span-1">Вопрос или предложение</label>
           <textarea rows="8" type="text" id="message" class="appearance-none px-3 py-2 border border-slate-400 col-span-2"></textarea>
         </div>
 
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid md:grid-cols-3 md:gap-10">
           <div class="col-start-2 col-span-2">
             <%= render ButtonComponent.new(link: "#", title: "Отправить сообщение", type: :primary) %>
           </div>

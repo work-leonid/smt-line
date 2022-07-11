@@ -11,7 +11,7 @@ class Element::TitleComponent < ViewComponent::Base
     when :h1
       "lg:leading-normal text-4xl lg:text-6xl"
     when :h2
-      "text-3xl"
+      "font-medium text-2xl md:text-3xl"
     else
       "text-2xl"
     end
