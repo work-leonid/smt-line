@@ -9,7 +9,7 @@ class Element::TitleComponent < ViewComponent::Base
   def type_classes
     case @type
     when :h1
-      "lg:leading-normal text-4xl lg:text-6xl"
+      "lg:leading-tight text-4xl lg:text-6xl"
     when :h2
       "font-medium text-2xl md:text-3xl"
     else

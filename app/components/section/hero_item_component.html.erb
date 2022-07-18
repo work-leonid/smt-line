@@ -1,27 +1,40 @@
-<section class="bg-slate-900 pb-10 md:pb-16 lg:pb-20  text-white">
+<section class="bg-slate-900 pb-10 md:pb-16 text-white">
 
   <!-- start navbar -->
   <%= render Section::NavbarComponent.new %>
   <!-- end navbar -->
 
-  <div class="">
-    <%= render Grid::HeroSecondPageComponent.new do |c| %>
-      <div class="text-base mb-5">
-        <a href="/pages/catalog" class="hover:text-sky-500">Каталог</a>
-        <span class="text-slate-500 mx-4"> / </span>
-        <a href="/pages/catalog-category" class="hover:text-sky-500">Установщики компонентов</a>
-        <span class="text-slate-500 mx-4"> / </span>
-        <a class="text-slate-500">Установщики компонентов</a>
-      </div>
 
-      <div class="mb-5 lg:mb-2">
-        <%= render Element::TitleComponent.new(title: "Установщик компонентов QIHE TVM926s", type: :h1) %>
-      </div>
-
-      <% c.with_action do %>
-        <%= link_to "Запросить цену", modal_path, data: { turbo_frame: 'modal' }, class: "inline-block bg-orange-500 hover:text-white/80 hover:bg-orange-600 flex-nowrap text-center w-auto rounded-full px-8 sm:px-8 py-3 font-medium" %>
-      <% end %>
-    <% end %>
+  <div class="text-base px-5 md:px-10 lg:px-20 mb-5">
+    <a href="/pages/catalog" class="hover:text-sky-500">Каталог</a>
+    <span class="text-slate-500 mx-4"> / </span>
+    <a href="/pages/catalog-category" class="hover:text-sky-500">Установщики компонентов</a>
+    <span class="text-slate-500 mx-4"> / </span>
+    <a class="text-slate-500">Установщик компонентов QIHE TVM926s</a>
   </div>
+
+  <h1 class="mb-5 md:mb-10 px-5 md:px-10 lg:px-20 lg:leading-tight text-4xl lg:text-6xl">Установщик компонентов QIHE TVM926s</h1>
+
+  <div class="grid  grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-20 px-5 md:px-10 lg:px-20">
+    <div>
+      <div class="flex flex-wrap gap-2 mb-10">
+        <% [ "Beijing Huawei Silkroad Electronic", "Управление: автоматическое", "Напряжение: 220В", "Питателей (максимум): 70-100", "Захваты: 8 шт"].each do |item| %>
+          <a href="/pages/catalog-category" class="text-sky-500 text-base border border-white/10 rounded-full hover:border-sky-400 px-3 py-1 hover:text-sky-400 transition-all duration-150">
+            <%= item %>
+          </a>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="mb-10">
+    <p class="mb-5 md:text-3xl md:leading-relaxed">
+      Высокоточный полуавтоматический трафаретный принтер для нанесения паяльной пасты.
+    </p>
+    </div>
+
+
+
+</div>
+
 
 </section>
