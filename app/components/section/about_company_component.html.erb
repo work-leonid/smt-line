@@ -10,7 +10,7 @@
       </div>
     <% end %>
 
-    <p class="mb-20">
+    <p class="mb-12">
     Нашей компании 12 лет. За это время мы изучили рынок оборудования, как свои 5 пальцев, наладили логистику, собрали пул опытнейших инженеров, запустили научно-исследовательские и опытно-конструкторские работы, научились объединять лучшие решения внедрять оборудование под ваши нужды: от кассовых аппаратов — до специализированной электроники.
     </p>
 
@@ -19,11 +19,10 @@
         <h2 class="mb-10 text-4xl">Наша команда</h2>
       </a>
 
-      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
-        <% [0, 1, 2, 3, 4, 5].each do |item| %>
-          <div>
-            <img src="https://placehold.co/200x200" class="mb-2 w-full" />
-            <p>Иванов Иван</p>
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-0">
+        <% (0..7).each do |item| %>
+          <div class="overflow-hidden w-full h-full break-inside-avoid group isolate">
+            <%= image_tag("photos/#{item}.jpg", class: "scale-90 group-hover:scale-100 transition-all duration-300 w-full -z-10 object-contain") %>
           </div>
         <% end %>
       </div>
